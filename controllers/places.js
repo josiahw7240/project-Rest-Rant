@@ -1,5 +1,9 @@
 const router = require("express").Router();
 
+router.get("/new", (req, res) => {
+  res.render("places/new");
+});
+
 router.get("/", (req, res) => {
   let places = [
     {
@@ -17,6 +21,7 @@ router.get("/", (req, res) => {
       pic: "/images/coffee-shop.jpg",
     },
   ];
+
   res.render("places/index", { places });
 });
 
